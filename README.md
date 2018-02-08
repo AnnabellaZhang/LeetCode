@@ -14,6 +14,8 @@ Winter Vacation:[Top Interview Questions](https://leetcode.com/problemset/top-in
 
 [5 Longest Palindromic Substring(Medium)](https://github.com/AnnabellaZhang/LeetCode/blob/master/script/longestPalindrome.py)
 
+[7 Reverse Integer(Easy)](https://github.com/AnnabellaZhang/LeetCode/blob/master/script/reverse.py)
+
 ## Reference
 [经典排序算法总结与实现](http://wuchong.me/blog/2014/02/09/algorithm-sort-summary/)
 
