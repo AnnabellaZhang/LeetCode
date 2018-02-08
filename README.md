@@ -10,6 +10,8 @@ Winter Vacation:[Top Interview Questions](https://leetcode.com/problemset/top-in
 
 [3 Longest Substring Without Repeating Characters(Medium)](https://github.com/AnnabellaZhang/LeetCode/blob/master/script/lengthOfLongestSubstring.py)
 
+[4 Median of Two Sorted Arrays(Hard)](https://github.com/AnnabellaZhang/LeetCode/blob/master/script/findMedianSortedArrays.py)
+
 ## Reference
 [经典排序算法总结与实现](http://wuchong.me/blog/2014/02/09/algorithm-sort-summary/)
 

@@ -52,4 +52,47 @@ class Solution:
                 ma = nums1[s1_p]
             return (mi + ma) / 2
 
-# Solution
+# Solution : From the middle of each List
+class Solution:
+    def findMedianSortedArrays(self,nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: float
+        """
+        m, n = len(nums1), len(nums2)
+        if n < m:
+            nums1,nums2,m,n = nums2,nums1,n,m
+        i = int(m/2)
+        j = int((m+n)/2-i)
+        flag = ( (m+n) % 2 == 0) #need to /2
+        while True:
+            if (j==0 or i==m or nums2[j-1] <= nums1[i]) and (i==0 or j==n or nums1[i-1] <= nums2[j]):
+                break
+            elif i<m and j>0 and nums2[j-1]>nums1[i]:
+                i = i+1
+                j = int((m+n)/2-i)
+            elif i>0 and j<n and nums1[i-1]>nums2[j]:
+                i = i-1
+                j = int((m+n)/2-i)
+        if flag:
+            if i>0 and j>0:
+                mi = max(nums1[i-1],nums2[j-1])
+            elif i==0:
+                mi = nums2[j-1]
+            else:
+                mi = nums1[i-1]
+            if i<m and j<n:
+                ma = min(nums1[i],nums2[j])
+            elif i==m:
+                ma = nums2[j]
+            else:
+                ma = nums1[i]
+            return (mi+ma)/2
+        else:
+            if i == m:
+                return nums2[j]
+            if j == n:
+                return nums1[i]
+            return min(nums1[i],nums2[j])
+                    
